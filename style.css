@@ -1,0 +1,55 @@
+body {
+  background-image: url(http://lucaskrech.com/blog/wp-content/uploads/2010/08/Cloud5l.jpeg);
+  background-size: cover;
+}
+
+#page {
+  margin: 5%;
+  padding: 5%;
+  min-height: 400px;
+  background-color: rgba( 240, 240, 240, 0.6);
+  -webkit-border-radius: 12px;
+          border-radius: 12px;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.tweet {
+  width: 28%;
+  height: 200px;
+  margin: 1%;
+  padding: 1%;
+  float: left;
+  border-style: solid;
+  border-color: #03d1f5;
+}
+
+#map_canvas {
+  border-style: solid;
+  border-color: #03d1f5;
+  margin: 2%;
+
+}
+
+section {
+  width: 45%;
+  min-height: 220px;
+  margin:  5% 1%;
+  padding: 1%;
+  float:left;
+  border-style: solid;
+  border-color: rgba( 250, 250, 250, 0.4);
+  -webkit-border-radius: 12px;
+          border-radius: 12px;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+
+}
+
+#search_geolocation form {
+  text-align: right;
+}
+
+.btn {
+  width:40%;
+  margin: 1% 30%;
+}
+
