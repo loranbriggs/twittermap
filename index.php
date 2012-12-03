@@ -10,22 +10,17 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUzyEaszncy5tactSdYzJDkcd-fYJSris&sensor=false">
     </script>
     <script>
+      var timer;
       $.ajaxSetup ({ cache:false });
       $(document).ready(function() {
-        $("#keyword_submit").click(function() {
-          setInterval(function() {
-            var search = document.getElementById("keyword").value;
-            $("#results").load("tweets.php", "search=" + search + "&searchType=key");
-          }, 20000);
-        });
-        $("#location_submit").click(function() {
-          setInterval(function() {
-            var latitude  = document.getElementById("lat").value;
-            var longitude = document.getElementById("long").value;
-            var radius    = document.getElementById("radius").value;
-            $("#results").load("tweets.php", "lat=" + latitude + 
-              "&long=" + longitude + "&radius=" + radius + "&searchType=geo");
-          }, 20000);
+        $("#submit_button").click(function Search() {
+          var keyword   = document.getElementById("keyword").value;
+          var latitude  = document.getElementById("lat").value;
+          var longitude = document.getElementById("long").value;
+          var radius    = document.getElementById("radius").value;
+          $("#results").load("tweets.php", "keyword=" + keyword + "&lat=" + latitude +
+            "&long=" + longitude + "&radius=" + radius + "&searchType=geo");
+          timer = setTimeout(Search, 25000);
         });
       });
     </script>
@@ -39,25 +34,18 @@
     <nav>
     </nav>
 
-    <section id="search_keyword">
+    <section class="search">
       <p>Hi there, this is a simple Twitter search. Please enter
       what you would like to search twitter for. How about kitties?</p>
-      <form method='get' action>
-        Search: <input type='text' id='keyword' name='search' placeholder='kitties or from:LAtimes' />
-        <input type='hidden' name='searchType' value='key'>
-        <input id="keyword_submit" class="btn btn-info" type="button" value="keyword search">
-      </form>
-    </section>
-
-    <section id="search_geolocation">
-      <p>You can also define a search by location</p>
-      <form method='get' action>
-        Latitude: <input type='text' id='lat' name='lat' value='34.01055' /><br>
-        Longitude: <input type='text' id='long' name='long' value='-118.491068' /><br>
-        Radius (miles): <input type='text' id='radius' name='radius' value='1' /><br>
-        <input type='hidden' name='searchType' value='geo'>
-        <input id="location_submit" class="btn btn-info" type="button" value="location search">
-      </form>
+        Search: <input type='text' id='keyword' name='search' placeholder='beach or from:LAtimes'
+          onkeydown="if (event.keyCode == 13) document.getElementById('submit_button').click()"/><br>
+        Latitude: <input type='text' id='lat' name='lat' value='34.01055'
+          onkeydown="if (event.keyCode == 13) document.getElementById('submit_button').click()"/><br>
+        Longitude: <input type='text' id='long' name='long' value='-118.491068'
+          onkeydown="if (event.keyCode == 13) document.getElementById('submit_button').click()"/><br>
+        Radius (miles): <input type='text' id='radius' name='radius' value='1'
+          onkeydown="if (event.keyCode == 13) document.getElementById('submit_button').click()"/><br>
+        <button id="submit_button" class="btn btn-info" type="button">search</button>
     </section>
 
     <div id="results">

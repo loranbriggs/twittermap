@@ -31,8 +31,8 @@ body {
 }
 
 section {
-  width: 45%;
-  min-height: 220px;
+  position: relative;
+  min-height: 250px;
   margin:  5% 1%;
   padding: 1%;
   float:left;
@@ -44,12 +44,21 @@ section {
 
 }
 
-#search_geolocation form {
+.search {
   text-align: right;
 }
 
-.btn {
-  width:40%;
-  margin: 1% 30%;
+.search p {
+  text-align: left;
 }
+
+.btn {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.tweet em { 
+  font-weight: bold;
+};
 

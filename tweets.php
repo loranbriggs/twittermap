@@ -17,16 +17,12 @@
       <?php
         require('twitter.class.php');
         $twitter = new twitter_class();
-        $searchType= $_GET['searchType'];
-        if ($searchType == 'geo') {
-          $lat= $_GET['lat'];
-          $long= $_GET['long'];
-          $radius= $_GET['radius'];
-          $searchTerm= $lat . ',' . $long . ',' . $radius . 'mi';
-        } else {
-          $searchTerm = $_GET['search'];
-        }
-        echo $twitter->getTweets($searchType, $searchTerm, 10);
+        $keyword = $_GET['keyword'];
+        $lat= $_GET['lat'];
+        $long= $_GET['long'];
+        $radius= $_GET['radius'];
+        $location = $lat . ',' . $long . ',' . $radius . 'mi';
+        echo $twitter->getTweets($keyword, $location, 10);
       ?>
     </div>
 

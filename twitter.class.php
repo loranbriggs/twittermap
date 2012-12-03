@@ -5,7 +5,7 @@ class twitter_class
 	function twitter_class()
 	{
 		$this->realNamePattern = '/\((.*?)\)/';
-		$this->searchURL = 'http://search.twitter.com/search.atom?';
+		$this->searchURL = 'http://search.twitter.com/search.atom?lang=en&q=';
 		
 		$this->intervalNames   = array('second', 'minute', 'hour', 'day', 'week', 'month', 'year');
 		$this->intervalSeconds = array( 1,        60,       3600,   86400, 604800, 2630880, 31570560);
@@ -13,18 +13,12 @@ class twitter_class
 		$this->badWords = array('somebadword', 'anotherbadword');
 	}
 
-	function getTweets($type, $q, $limit=15)
+	function getTweets($keyword, $location, $limit=15)
 	{
 		$output = '';
 
-    // set search type
-    if ( $type == 'geo' ) {
-      $type = 'geocode=';
-    } else {
-      $type = 'lang=en&q=';
-    }
 		// get the seach result
-		$ch= curl_init($this->searchURL . $type . urlencode($q));
+		$ch= curl_init($this->searchURL . urlencode($keyword) . "&geocode=" . urlencode($location) );
 
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
