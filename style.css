@@ -30,7 +30,7 @@ body {
 
 }
 
-section {
+.search {
   position: relative;
   min-height: 250px;
   margin:  5% 1%;
