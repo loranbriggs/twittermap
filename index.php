@@ -35,14 +35,14 @@
     </nav>
 
     <div class="search row-fluid">
-      <div class="span6">
+      <div class="span5 offset1">
         <p>
           Hi there, this is a simple Twitter search. Please enter
           what you would like to search twitter for. The default searches for the keyword
           beach in the Santa Monica, Ca area.
         </p>
       </div>
-      <div class="span6">
+      <div class="span5">
         Search: <input type='text' id='keyword' name='search' value='beach'
           onkeydown="if (event.keyCode == 13) document.getElementById('submit_button').click()"/><br>
         Latitude: <input type='text' id='lat' name='lat' value='34.01055'
