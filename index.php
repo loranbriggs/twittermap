@@ -36,21 +36,21 @@
     </nav>
 
     <div class="search row-fluid">
-      <div class="span5 offset1">
+      <div class="welcome-text span4 offset1">
         <p>
           Hi there, this is a simple Twitter search. Please enter
           what you would like to search twitter for. The default searches for the keyword
           beach in the Santa Monica, Ca area.
         </p>
       </div>
-      <div class="span5">
-        Search: <input type='text' id='keyword' name='search' value='beach'
+      <div class="input-fields span4 offset2">
+        <label>Search:</label><input type='text' id='keyword' name='search' value='beach'
           onkeydown="if (event.keyCode == 13) document.getElementById('submit_button').click()"/><br>
-        Latitude: <input type='text' id='lat' name='lat' value='34.01055'
+        <label>Latitude:</label><input type='text' id='lat' name='lat' value='34.01055'
           onkeydown="if (event.keyCode == 13) document.getElementById('submit_button').click()"/><br>
-        Longitude: <input type='text' id='long' name='long' value='-118.491068'
+        <label>Longitude:</label><input type='text' id='long' name='long' value='-118.491068'
           onkeydown="if (event.keyCode == 13) document.getElementById('submit_button').click()"/><br>
-        Radius (miles): <input type='text' id='radius' name='radius' value='1'
+        <label>Radius (miles):</label><input type='text' id='radius' name='radius' value='1'
           onkeydown="if (event.keyCode == 13) document.getElementById('submit_button').click()"/><br>
         <button id="submit_button" class="btn btn-info" type="button">search</button>
       </div>
