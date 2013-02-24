@@ -49,7 +49,9 @@
         <p>
           See what's tweeting around you! Enter a keyword and location to see what
           what people are tweeting near by. The default searches for the keyword
-          beach in the Santa Monica, Ca area.
+          beach in the Santa Monica, Ca area.<br />
+          *Note must press lat/long button to convert location to lat long,
+          location can be tweaked by dragging popup map.
         </p>
       </div>
       <div class="input-fields span4 offset2">

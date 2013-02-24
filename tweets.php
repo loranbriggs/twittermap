@@ -14,7 +14,7 @@
   ?>
 </div>
 
-<div id="map_canvas" style="height: 500px; width: 60%;">
+<div id="map_canvas" class="span6" style="height: 500px;">
 </div>
 
 <footer>

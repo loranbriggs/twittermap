@@ -101,7 +101,7 @@ class twitter_class
 				}
 				
 				$output .= '
-				<div class="tweet">
+				<div class="tweet span3">
 					<div class="avatar">
 						<a href="' . $account . '" target="_blank"><img src="' . $image .'"></a>
 					</div>
