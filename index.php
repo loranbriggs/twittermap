@@ -71,6 +71,7 @@
     </div>
 
     <footer>
+      <a href="http://codesquire.com/default_privacy_statement.php">Privacey Statement</a>
       <script>
       </script>
     </footer>
