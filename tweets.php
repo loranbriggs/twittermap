@@ -48,7 +48,7 @@
           zoom: 15,
           center: latlng,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
-          mapTypeControl: false
+          mapTypeControl: true 
       };
       var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
       var infowindow = new google.maps.InfoWindow(), marker, i;
